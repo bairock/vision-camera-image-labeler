@@ -17,7 +17,7 @@ interface ImageLabel {
  *
  * This algorithm executes within **~60ms**, so a frameRate of **16 FPS** perfectly allows the algorithm to run without dropping a frame. Anything higher might make video recording stutter, but works too.
  */
-export function labelImage(frame: Frame): ImageLabel[] {
+export function labelImage(frame: Frame): string {
   'worklet';
   // @ts-expect-error Frame Processors are not typed.
   return __labelImage(frame);
